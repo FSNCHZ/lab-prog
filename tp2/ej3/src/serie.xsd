@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Serie-->
+
+    <xsd:element name="serie">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="personajes" minOccurs="1"></xsd:element>
+                <xsd:element name="trama"></xsd:element>
+                <xsd:element ref="hashtags"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute ref="cod" use="required"></xsd:attribute>
+            <xsd:attribute name="titulo" type="xsd:string" use="required"></xsd:attribute>
+            <xsd:attribute ref="genero"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:attribute name="cod" >
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="[a-zA-Z][0-9][0-9]"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:attribute name="genero">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="acción"></xsd:pattern>
+                <xsd:pattern value="drama"></xsd:pattern>
+                <xsd:pattern value="ciencia ficción"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <!-- Personajes-->
+
+    <xsd:element name="personajes">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                <xsd:element ref="personaje"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique name="id">
+            <xsd:selector xpath="personaje"/>
+            <xsd:field xpath="@id"/>
+        </xsd:unique>
+    </xsd:element>
+
+    <!-- Personaje-->
+
+    <xsd:element name="personaje">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="nombre"></xsd:element>
+                <xsd:element ref="genero"></xsd:element>
+                <xsd:element name="descripcion" minOccurs="0"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:integer"></xsd:attribute>
+            <xsd:attribute ref="tipo" default="principal"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+
+    <xsd:attribute name="tipo">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="principal"></xsd:pattern>
+                <xsd:pattern value="secundario"></xsd:pattern>
+                <xsd:pattern value="reparto"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:element name="genero">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:pattern value="M"></xsd:pattern>
+                <xsd:pattern value="F"></xsd:pattern>
+                <xsd:pattern value="O"></xsd:pattern>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <!-- Hashtag-->
+
+    <xsd:element name="hashtags">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="hashtag"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="hashtag">
+        <xsd:complexType>
+            <xsd:attribute name="nombre" type="xsd:string"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

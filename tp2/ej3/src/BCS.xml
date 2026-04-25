@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="serie.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<serie cod="A93" titulo="Better Call Saul" genero="drama">
+    <personajes>
+        <personaje id="1" tipo="principal">
+            <nombre>Saul Goodman</nombre>
+            <genero>M</genero>
+            <descripcion>Saul Goodman es un abogado carismático y poco ético que usa su astucia y trucos legales para sacar ventaja, especialmente en el mundo criminal.</descripcion>
+        </personaje>
+        <personaje id="2" tipo="principal">
+            <nombre>Saul Goodman</nombre>
+            <genero>M</genero>
+            <descripcion>Saul Goodman es un abogado carismático y poco ético que usa su astucia y trucos legales para sacar ventaja, especialmente en el mundo criminal.</descripcion>
+        </personaje>
+    </personajes>
+    <trama>Better Call Saul narra la transformación de Jimmy McGill, un abogado con buenas intenciones, en el astuto y corrupto Saul Goodman, mostrando su camino hacia el mundo del crimen.</trama>
+    <hashtags>
+        <hashtag nombre="abogado"/>
+    </hashtags>
+</serie>

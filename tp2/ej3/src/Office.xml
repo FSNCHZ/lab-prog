@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="serie.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<serie cod="A12" titulo="The Office">
+    <personajes>
+        <personaje id="2" tipo="reparto">
+            <nombre>Jim Halpert</nombre>
+            <genero>M</genero>
+            <descripcion>Trabaja como vendedor en la empresa Dunder Mifflin y se destaca por su personalidad relajada, su humor irónico y su tendencia a hacer bromas, especialmente a su compañero Dwight</descripcion>
+        </personaje>
+    </personajes>
+    <trama>The Office sigue el día a día de los empleados de una oficina de venta de papel, mostrando sus relaciones, conflictos y situaciones absurdas a través de un formato de falso documental lleno de humor.</trama>
+    <hashtags>
+        <hashtag nombre="oficina"/>
+        <hashtag nombre="humor"/>
+    </hashtags>
+</serie>

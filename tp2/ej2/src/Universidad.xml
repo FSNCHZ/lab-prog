@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Universidad.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<universidad>
+    <nombre>Universidad de la Patagonia Austral</nombre>
+    <pais>Argentina</pais>
+    <localidad>Río Gallegos</localidad>
+    <direccion>Av. Gregores y Piloto "Lero" Rivera</direccion>
+
+    <!-- Carreras-->
+
+    <carreras>
+        <carrera id="1">
+            <nombre>Licenciatura en Sistemas</nombre>
+            <duracion>3</duracion>
+            <horas>6</horas>
+            <materias>
+                <materia>Laboratorio de Programación</materia>
+                <materia>Gestión de Proyectos</materia>
+                <materia>Matemática III</materia>
+                <materia>Sistemas Distribuidos</materia>
+                <materia>Validación y Verificación de Software</materia>
+            </materias>
+        </carrera>
+    </carreras>
+
+    <!-- Asignaturas-->
+
+    <asignaturas>
+        <asignatura asig-id="1" id-carrera="1">
+            <nombre>Laboratorio de Programación</nombre>
+            <anio>3</anio>
+            <cuatrimestre>Primer</cuatrimestre>
+            <horas-teoricas>3</horas-teoricas>
+            <horas-practicas>3</horas-practicas>
+        </asignatura>
+        <asignatura asig-id="2" id-carrera="1">
+            <nombre>Gestión de Proyectos</nombre>
+            <anio>3</anio>
+            <cuatrimestre>Primer</cuatrimestre>
+            <horas-teoricas>2</horas-teoricas>
+            <horas-practicas>2</horas-practicas>
+        </asignatura>
+        <asignatura asig-id="3" id-carrera="1">
+            <nombre>Matemática III</nombre>
+            <anio>3</anio>
+            <cuatrimestre>Primer</cuatrimestre>
+            <horas-teoricas>2</horas-teoricas>
+            <horas-practicas>2</horas-practicas>
+        </asignatura>
+        <asignatura asig-id="4" id-carrera="1">
+            <nombre>Sistemas Distribuidos</nombre>
+            <anio>3</anio>
+            <cuatrimestre>Primer</cuatrimestre>
+            <horas-teoricas>3</horas-teoricas>
+            <horas-practicas>2</horas-practicas>
+        </asignatura>
+        <asignatura asig-id="5" id-carrera="1">
+            <nombre>Validación y Verificación de Software</nombre>
+            <anio>3</anio>
+            <cuatrimestre>Primer</cuatrimestre>
+            <horas-teoricas>2</horas-teoricas>
+            <horas-practicas>2</horas-practicas>
+        </asignatura>
+    </asignaturas>
+
+    <!-- Alumnos-->
+
+     <alumnos>
+        <alumno id-alumno="1">
+            <apellido>Sánchez</apellido>
+            <nombre>Francisco</nombre>
+            <sexo>Varon</sexo>
+            <estudios>
+                <id-carrera>1</id-carrera>
+                <alum-asignaturas>
+                    <id-asignatura>1</id-asignatura>
+                    <id-asignatura>2</id-asignatura>
+                    <id-asignatura>3</id-asignatura>
+                    <id-asignatura>4</id-asignatura>
+                    <id-asignatura>5</id-asignatura>
+                </alum-asignaturas>
+            </estudios>
+        </alumno>
+     </alumnos>
+     
+</universidad>

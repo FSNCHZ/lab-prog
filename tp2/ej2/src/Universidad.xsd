@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <xsd:element name="universidad">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="nombre" type="xsd:string"></xsd:element>
+                <xsd:element name="pais" type="xsd:string"></xsd:element>
+                <xsd:element name="localidad" type="xsd:string"></xsd:element>
+                <xsd:element name="direccion" type="xsd:string"></xsd:element>
+                <xsd:element ref="carreras"></xsd:element>
+                <xsd:element ref="asignaturas"></xsd:element>
+                <xsd:element ref="alumnos"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Carreras-->
+
+    <xsd:element name="carreras">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="carrera"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="carrera">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="nombre" type="xsd:string"></xsd:element>
+                <xsd:element name="duracion" type="xsd:integer"></xsd:element>
+                <xsd:element name="horas" type="xsd:integer"></xsd:element>
+                <xsd:element ref="materias"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute ref="id" use="required"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:attribute name="id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <xsd:totalDigits value="3"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:element name="materias">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element name="materia" type="xsd:string"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Asignaturas-->
+
+    <xsd:element name="asignaturas">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element ref="asignatura"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="asignatura">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="nombre" type="xsd:string"></xsd:element>
+                <xsd:element name="anio" type="xsd:integer"></xsd:element>
+                <xsd:element ref="cuatrimestre"></xsd:element>
+                <xsd:element name="horas-teoricas" type="xsd:integer"></xsd:element>
+                <xsd:element name="horas-practicas" type="xsd:integer"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute ref="asig-id" use="required"></xsd:attribute>
+            <xsd:attribute name="id-carrera" type="xsd:integer" use="required"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:attribute name="asig-id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <xsd:totalDigits value="4"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:element name="cuatrimestre">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Primer"></xsd:enumeration>
+                <xsd:enumeration value="Segundo"></xsd:enumeration>
+                <xsd:enumeration value="Anual"></xsd:enumeration>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <!-- Alumnos-->
+
+    <xsd:element name="alumnos">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element ref="alumno"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="alumno">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="apellido"></xsd:element>
+                <xsd:element name="nombre"></xsd:element>
+                <xsd:element ref="sexo"></xsd:element>
+                <xsd:element ref="estudios"></xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="id-alumno" use="required"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:attribute name="id-alumno">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <xsd:totalDigits value="5"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:attribute>
+
+    <xsd:element name="sexo">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="Varon"></xsd:enumeration>
+                <xsd:enumeration value="Mujer"></xsd:enumeration>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="estudios">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id-carrera" type="xsd:integer"></xsd:element>
+                <xsd:element ref="alum-asignaturas"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="alum-asignaturas">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element name="id-asignatura" type="xsd:integer"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

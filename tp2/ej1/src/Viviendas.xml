@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="./Viviendas.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<vivienda>
+    <id>1</id>
+    <calle>Potosi</calle>
+    <nro>945</nro>
+    <titular>Sánchez Francisco</titular>
+    <habitantes>2</habitantes>
+</vivienda>
