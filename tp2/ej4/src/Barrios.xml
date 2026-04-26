@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="barrios.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<barrios>
+    <barrio>
+        <id>1</id>
+        <nombre>Belgrano</nombre>
+    </barrio>
+    <barrio>
+        <id>2</id>
+        <nombre>Evita</nombre>
+    </barrio>
+    <barrio>
+        <id>3</id>
+        <nombre>Newbery</nombre>
+    </barrio>
+</barrios>

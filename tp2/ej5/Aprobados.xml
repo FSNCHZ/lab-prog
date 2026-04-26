@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aprobados>
+   <alumno>
+      <nombre>Juan Perez</nombre>
+      <materia> Resolución </materia>
+      <carrera>AdeS</carrera>
+      <nota>90</nota>
+   </alumno>
+   <alumno>
+      <nombre>Francisco Lopez</nombre>
+      <materia>Algebra</materia>
+      <carrera>LeS</carrera>
+      <nota>80</nota>
+   </alumno>
+   <alumno>
+      <nombre>Francisco Lopez</nombre>
+      <materia>Resolucion</materia>
+      <carrera>LeS</carrera>
+      <nota>75</nota>
+   </alumno>
+   <alumno>
+      <nombre>Joaquin Garcia</nombre>
+      <materia>Resolucion</materia>
+      <carrera>LeS</carrera>
+      <nota>100</nota>
+   </alumno>
+</aprobados>

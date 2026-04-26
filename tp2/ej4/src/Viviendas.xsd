@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- BD Viviendas-->
+    <xsd:element name="viviendas">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element ref="vivienda"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!-- Tabla Vivienda-->
+    <xsd:element name="vivienda">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="id"></xsd:element>
+                <xsd:element ref="calle"></xsd:element>
+                <xsd:element ref="nro"></xsd:element>
+                <xsd:element ref="titular"></xsd:element>
+                <xsd:element ref="habitantes"></xsd:element>
+                <xsd:element ref="barrio_id"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:key name="ViviendaID">
+            <xsd:selector xpath="Viviendas/Vivienda"/>
+            <xsd:field xpath="id"/>
+        </xsd:key>
+    </xsd:element>
+
+    <!-- Campos-->
+    <xsd:element name="id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <!-- Para que tenga máx. 5 digitos-->
+                <xsd:totalDigits value="5"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="calle">
+        <xsd:simpleType>
+            <!-- Para que tenga máx. 10 caracteres-->
+            <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="50"></xsd:maxLength>
+                <xsd:whiteSpace value="collapse"></xsd:whiteSpace>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="nro">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <xsd:totalDigits value="5"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="titular">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="40"></xsd:maxLength>
+                <xsd:whiteSpace value="collapse"></xsd:whiteSpace>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="habitantes">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <xsd:totalDigits value="2"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="barrio_id">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:int">
+                <xsd:totalDigits value="5"></xsd:totalDigits>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+</xsd:schema>
