@@ -13,4 +13,10 @@ public class Vivienda {
         return vivienda;
     }
 
+    public static JSONObject modVivienda(JSONObject vivienda, String nuevoTitular, int nuevoHabitantes){
+        vivienda.put("titular", nuevoTitular);
+        vivienda.put("habitantes", nuevoHabitantes);
+        return vivienda;
+    }
+
 }
