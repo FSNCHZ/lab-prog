@@ -1,0 +1,244 @@
+[
+    {
+        "serie": {
+            "id": 1,
+            "titulo": "Breaking Bad",
+            "creador": "Vince Gilligan",
+            "anio": 2008,
+            "cant-temporadas": 5,
+            "episodios-temporadas": [
+                {
+                    "temporada": 1,
+                    "cant-episodios": 7
+                },
+                {
+                    "temporada": 2,
+                    "cant-episodios": 13
+                },
+                {
+                    "temporada": 3,
+                    "cant-episodios": 13
+                },
+                {
+                    "temporada": 4,
+                    "cant-episodios": 13
+                },
+                {
+                    "temporada": 5,
+                    "cant-episodios": 16
+                }
+            ],
+            "actores": [
+                "Bryan Cranston", "Aaron Paul", "Anna Gunn"
+            ],
+            "generos": [
+                "Crimen", "Drama", "Suspenso"
+            ],
+            "estado": "finalizada",
+            "calificacion": 9.5
+        }
+    },
+    {
+        "serie": {
+            "id": 2,
+            "titulo": "Game of Thrones",
+            "creador": "David Benioff",
+            "anio": 2011,
+            "cant-temporadas": 8,
+            "episodios-temporadas": [
+                {
+                    "temporada": 1,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 2,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 3,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 4,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 5,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 6,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 7,
+                    "cant-episodios": 7
+                },
+                {
+                    "temporada": 8,
+                    "cant-episodios": 6
+                }
+            ],
+            "actores": [
+                "Emilia Clarke", "Peter Dinklage", "Kit Harington"
+            ],
+            "generos": [
+                "Acción", "Aventura", "Drama"
+            ],
+            "estado": "finalizada",
+            "calificacion": 9.2
+        }
+    },
+    {
+        "serie": {
+            "id": 3,
+            "titulo": "Stranger Things",
+            "creador": "Matt Duffer",
+            "anio": 2016,
+            "cant-temporadas": 5,
+            "episodios-temporadas": [
+                {
+                    "temporada": 1,
+                    "cant-episodios": 8
+                },
+                {
+                    "temporada": 2,
+                    "cant-episodios": 9
+                },
+                {
+                    "temporada": 3,
+                    "cant-episodios": 8
+                },
+                {
+                    "temporada": 4,
+                    "cant-episodios": 9
+                },
+                {
+                    "temporada": 5,
+                    "cant-episodios": 8
+                }
+            ],
+            "actores": [
+                "Millie Bobby Brown", "Finn Wolfhard", "Winona Ryder"
+            ],
+            "generos": [
+                "Suspenso", "Conspiración", "Ciencia Ficción"
+            ],
+            "estado": "finalizada",
+            "calificacion": 8.6
+        }
+    },
+    {
+        "serie": {
+            "id": 4,
+            "titulo": "Better Call Saul",
+            "creador": "Vince Gilligan",
+            "anio": 2015,
+            "cant-temporadas": 6,
+            "episodios-temporadas": [
+                {
+                    "temporada": 1,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 2,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 3,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 4,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 5,
+                    "cant-episodios": 10
+                },
+                {
+                    "temporada": 6,
+                    "cant-episodios": 13
+                }
+            ],
+            "actores": [
+                "Bob Odenkirk", "Rhea Seehorn", "Jonathan Banks"
+            ],
+            "generos": [
+                "Crimen", "Drama", "Comedia"
+            ],
+            "estado": "finalizada",
+            "calificacion": 9.0
+        }
+    },
+    {
+        "serie": {
+            "id": 5,
+            "titulo": "Chernobyl",
+            "creador": "Craig Mazin",
+            "anio": 2019,
+            "cant-temporadas": 1,
+            "episodios-temporadas": [
+                {
+                    "temporada": 1,
+                    "cant-episodios": 5
+                }
+            ],
+            "actores": [
+                "Jared Harris", "Jessie Buckley", "Stellan Skarsgard"
+            ],
+            "generos": [
+                "Documental", "Drama", "Científico"
+            ],
+            "estado": "finalizada",
+            "calificacion": 9.3
+        }
+    },
+    {
+        "serie": {
+            "id": 6,
+            "titulo": "Black Mirror",
+            "creador": "Charlie Brooker",
+            "anio": 2011,
+            "cant-temporadas": 7,
+            "episodios-temporadas": [
+                {
+                    "temporada": 1,
+                    "cant-episodios": 3
+                },
+                {
+                    "temporada": 2,
+                    "cant-episodios": 4
+                },
+                {
+                    "temporada": 3,
+                    "cant-episodios": 6
+                },
+                {
+                    "temporada": 4,
+                    "cant-episodios": 6
+                },
+                {
+                    "temporada": 5,
+                    "cant-episodios": 3
+                },
+                {
+                    "temporada": 6,
+                    "cant-episodios": 5
+                },
+                {
+                    "temporada": 7,
+                    "cant-episodios": 6
+                }
+            ],
+            "actores": [
+                "Anjana Vasan", "Cristin Milioti", "Jesse Plemons"
+            ],
+            "generos": [
+                "Ciencia Ficción", "Comedia", "Drama"
+            ],
+            "estado": "emisión",
+            "calificacion": 5.0
+        }
+    }
+]
