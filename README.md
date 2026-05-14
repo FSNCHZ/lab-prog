@@ -1,4 +1,9 @@
 # IMPORTANTE
+## Trabajo Práctico 3 - 13/5/26
+
+El archivo Streaming.json corresponde al json solicitado en el punto 2
+El archivo series.json corresponde al json solicitado en el punto 3
+
 ## Trabajo Práctico 2 - 26/4/26
 
 El archivo Informe.xml se generó sin tabulación, pero los datos están correctos.
