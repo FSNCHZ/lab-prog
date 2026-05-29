@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Gestión de Viviendas</h2>
+    </header>
+    <main id="main">
+        <form class="form" id="form">
+            <div class="datos-vivienda">
+                <legend>Datos de la vivienda</legend>
+                <label for="id-vivienda">ID</label>
+                <input type="number" name="id-vivienda" id="id-vivienda">
+                <label for="calle">Calle</label>
+                <input type="text" name="calle" id="calle">
+                <label for="numero">Número</label>
+                <input type="number" name="numero" id="numero">
+                <label for="titular">Titular</label>
+                <input type="text" name="Titular" id="titular">
+                <label for="habitantes">N° de Habitantes</label>
+                <input type="number" name="habitantes" id="habitantes">
+            </div>
+            <div class="datos-barrio">
+                <legend>Datos del barrio</legend>
+                <label for="nombre-barrio">Nombre</label>
+                <select name="nombre-barrio" id="nombre-barrio">
+                    <option value="belgrano">Belgrano</option>
+                    <option value="evita">Evita</option>
+                    <option value="centro">Centro</option>
+                    <option value="dos-abril">2 de Abril</option>
+                    <option value="fatima">Fatima</option>
+                    <option value="docente">Docente</option>
+                    <option value="procear">Procrear</option>
+                </select>
+            </div>
+            <div class="botones">
+                <button type="button" id="validarBtn" value="Validar">Validar</button>
+                <button type="reset" value="Limpiar">Limpiar</button>
+                <button type="submit" value="generarJSON">Generar JSON</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>TP4 - Sánchez Francisco</p>
+    </footer>
+</body>
+</html>

@@ -1,3 +1,8 @@
+/**
+ * <p>Se presenta la clase Informe, la cual permite generar un informe de alumnos a partir de un archivo xml de alumnos</p>
+ * El programa utiliza DocumentBuilder y DocumentBuilderFactory para realizar dicho informe
+ */
+
 package tp2.ej6.src;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -18,6 +23,13 @@ public class Informe {
         docXML = builder.parse("./tp2/ej6/src/Aprobados.xml");
     }
 
+    /**
+     * Imprime los datos (nombre, materia, nota y promedio) del alumno por pantalla
+     * Lee etiqueta <alumno> (NodeList alumnos) a partir de la etiqueta <alumnos>(Element root)
+     * A partir de cada etiqueta <alumno>, lee las etiquetas <nombre>, <materia> y <nota> y los imprime por pantalla
+     * @see promAlumnos
+     */
+
     public void generarInforme(){
         String nombre, materia;
         int nota;
@@ -37,6 +49,12 @@ public class Informe {
         }
         System.out.println("Promedio de los alumnos: " + this.promAlumnos());
     }
+
+    /**
+     * Método privado que calcula el promedio de los alumnos
+     * Lee las etiquetas <nota> del alumno, y calcula el promedio
+     * @return promedio 
+     */
 
     private int promAlumnos(){
         int suma = 0;

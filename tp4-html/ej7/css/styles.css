@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+}
+
+h2{
+    font-size: 18px;
+}
+
+.button{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    min-height: 40px;
+    background-color: #254441;
+    border-radius: 30px;
+}
+
+.button:hover{
+    background-color: #35665e;
+}
+
+header{
+    min-height: 80px;
+    background: #35665e;
+    background: linear-gradient(90deg,#35665e 25%, rgba(37, 68, 65, 1) 25%);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header h2{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.nav-ul{
+    width: 40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-ul a{
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.nav-ul a:hover{
+    background-color: #35665e;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+#aside{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.inicio{
+    width: 80%;
+    min-height: 250px;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+#datos-personales{
+    width: 80%;
+    min-height: 400px;
+    background-color: #35665e;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.datos-dl{
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.datos-dl dt{
+    font-weight: 500;
+}
+
+.datos-dl dd{
+    font-weight: 300;
+}
+
+#datos-personales .button{
+    background-color: #35665e;
+}
+
+#datos-personales .button:hover{
+    background-color: #254441;
+}
+
+#section{
+    background: #f8f8f8;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 30px;
+}
+
+#section h2{
+    min-height: 50px;
+    background-color: #254441;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+#formacion-academica{
+    min-height: 300px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#formacion-academica p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#formacion-academica a{
+    margin: 20px 0px 30px 30px;
+}
+
+.estudios{
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px 30px 20px 30px;
+}
+
+.estudios ul{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.cursos {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px 30px 20px 30px;
+}
+
+.cursos ul{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#experiencia-laboral{
+    min-height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#experiencia-laboral dl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 20px;
+}
+
+#experiencia-laboral a{
+    margin: 0px 0px 30px 30px;
+}
+
+#datos-interes{
+    min-height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    gap: 20px;
+}
+
+.datos{
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 30px;
+}
+
+.estudios p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+footer{
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    color: white;
+    background: #35665e;
+    background: linear-gradient(90deg,#35665e 25%, #254441 25%);
+}

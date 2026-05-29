@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h2>Formulario</h2>
+    </header>
+    <main>
+        <form action="">
+            <fieldset>
+                <legend>Datos del expediente</legend>
+                <label for="num-exp">Número expediente</label>
+                <input type="text" name="num-exp" id="num-exp" required>
+                <label for="area">Área</label>
+                <select name="area" id="area">
+                    <option value="mesa-entrada">Mesa de entrada</option>
+                    <option value="juridico">Jurídico</option>
+                    <option value="informatica">Informática</option>
+                    <option value="administracion">Administración</option>
+                </select>
+                <label for="tipo-exp">Tipo de expediente</label>
+                <select name="tipo-exp" id="tipo-exp">
+                    <option value="urgente">Urgente</option>
+                    <option value="normal">Normal</option>
+                    <option value="bajo">Bajo</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Datos de gestión</legend>
+                    <label for="cant-dias">Cantidad de días en trámite</label>
+                    <input type="number" name="cant-dias" id="cant-dias" min="1" required>
+                    <label for="estado">Estado</label>
+                    <input type="radio" name="estado" id="pendiente" value="pendiente">
+                    <label for="pendiente">Pendiente</label>
+                    <input type="radio" name="estado" id="en-proceso" value="en-proceso">
+                    <label for="en-proceso">En proceso</label>
+                    <input type="radio" name="estado" id="finalizado" value="finalizado">
+                    <label for="finalizado">Finalizado</label>
+                    <label for="responsable">Responsable</label>
+                    <input type="text" name="responsable" id="responsable" required>
+                    <label for="exp-gestionados">Expedientes gestionados hoy</label>
+                    <input type="number" name="exp-gestionados" id="exp-gestionados" required>
+                    <label for="horas-trabajadas">Horas trabajadas</label>
+                    <input type="number" name="horas-trabajadas" id="horas-trabajadas" min="1" max="12" required>
+            </fieldset>
+            <input type="submit" value="Validar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </main>
+    <footer>
+        <p>TP4 - Sánchez Francisco</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Gestión de Viviendas</h2>
+    </header>
+    <main id="main">
+        <form class="form" id="form">
+            <fieldset>
+                <legend>Datos de la vivienda</legend>
+                <label for="id-vivienda">ID</label>
+                <input type="number" name="id-vivienda" id="id-vivienda">
+                <label for="calle">Calle</label>
+                <input type="text" name="calle" id="calle">
+                <label for="numero">Número</label>
+                <input type="number" name="numero" id="numero">
+                <label for="titular">Titular</label>
+                <input type="text" name="Titular" id="titular">
+                <label for="habitantes">N° de Habitantes</label>
+                <input type="number" name="habitantes" id="habitantes">
+            </fieldset>
+            <fieldset>
+                <legend>Datos del barrio</legend>
+                <label for="nombre-barrio">Nombre</label>
+                <select name="nombre-barrio" id="nombre-barrio">
+                    <option value="belgrano">Belgrano</option>
+                    <option value="evita">Evita</option>
+                    <option value="centro">Centro</option>
+                    <option value="dos-abril">2 de Abril</option>
+                    <option value="fatima">Fatima</option>
+                    <option value="docente">Docente</option>
+                    <option value="procear">Procrear</option>
+                </select>
+            </fieldset>
+            <button type="button" id="validarBtn" value="Validar">Validar</button>
+            <button type="reset" value="Limpiar">Limpiar</button>
+            <button type="submit" value="generarJSON">Generar JSON</button>
+        </form>
+    </main>
+    <footer>
+        <p>TP4 - Sánchez Francisco</p>
+    </footer>
+</body>
+</html>
