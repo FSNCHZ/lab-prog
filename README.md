@@ -1,4 +1,9 @@
 # IMPORTANTE
+
+## Trabajo Práctico 6 - Proyecto Final
+
+El video que pertenece a la demostración del proyecto es "Video_Trabajo_Final_SanchezFrancisco.mp4". Ya avisé por mail al profesor Reinaga, pero el proyecto tiene un CSS muy básico porque me cortaron la luz en mi casa, y no pude terminar de pulirlo bien, como así la funcionalidad es muy básica. En caso de que se pueda hacer una re entrega estaría muy agradecido.
+
 ## Trabajo Práctico 3 - 13/5/26
 
 El archivo Streaming.json corresponde al json solicitado en el punto 2
