@@ -45,6 +45,17 @@ main {
     color: white;
 }
 
+.btn-volver a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.404);
+}
+
+.btn-volver a:hover{
+    color: rgb(0, 0, 0);
+}
+
 tbody tr td{
     padding-left: 10px;
 }

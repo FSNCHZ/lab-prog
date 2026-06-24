@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="header text-center py-3 mb-4">
+        <div class="header text-center py-3 mb-2">
             <h1 class="h3 mb-2 text-dark">Listado de Barrios</h1>
             <nav>
                 <div class="d-flex justify-content-center gap-4">
@@ -23,6 +23,30 @@
         </div>
     </header>
     <main>
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <div class="p-4 d-flex justify-content-center">
+                <a th:href="@{/barrios/nuevo}" class="btn-agregar btn-primary mb-3 px-3 py-2 rounded-5">Agregar barrio</a>
+            </div>
+            <div class="p-2 d-flex justify-content-center w-25">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th class="w-75">Nombre</th>
+                            <th class="w-25 text-center">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="barrio : ${barrios}">
+                            <td th:text="${barrio.nombre}" class="pt-3">Nombre</td>
+                            <td class="text-center">
+                                <a th:href="@{/barrios/{id}(id=${barrio.id})}" class="btn btn-danger">🗑︎</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--
         <div class="container w-50">
             <div class="row mb-4">
                 <div class="col-lg-3">
@@ -46,6 +70,7 @@
                 </tbody>
             </table>
         </div>
+        -->
     </main>
     <footer class="mt-5 py-3 bg-white border-top">
         <div class="container text-center text-muted small">

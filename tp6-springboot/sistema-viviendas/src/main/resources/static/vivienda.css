@@ -1,5 +1,8 @@
 *{
     font-family: "Google Sans", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -15,7 +18,7 @@ main {
 
 .header {
     background-color: white;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #e4e4e4;
 }
 
 .header h1 {
@@ -33,31 +36,27 @@ main {
 }
 
 .btn-agregar {
-    background-color: #5c7cfa;
+    background-color: #a1b4ff;
     border: none;
-    color: white;
-    height: 60px;
-    padding: 8px 15px;
-    border-radius: 6px;
+    color: rgb(61, 61, 61);
     text-decoration: none;
 }
 
 .btn-agregar:hover {
-    background-color: #4c6ef5;
+    background-color: #7f98ff;
     color: white;
 }
 
 .btn-modificar {
-    background-color: #6c757d;
+    background-color: #68a36b;
     border: none;
     color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 8px 12px;
     text-decoration: none;
 }
 
 .btn-modificar:hover {
-    background-color: #5a6268;
+    background-color: #4c774e;
     color: white;
 }
 
@@ -65,20 +64,47 @@ main {
     background-color: #c92a2a;
     border: none;
     color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 8px 12px;
     text-decoration: none;
 }
 
 .btn-eliminar:hover {
     background-color: #a61e1e;
     color: white;
+    transform: scale(1.5px);
 }
 
-thead th{
-    font-weight: 200;
+.card {
+    min-height: 390px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    background-color: white;
 }
 
-tbody td:hover{
-    background-color: #b3ccf1;
+.card:hover {
+    transform: scaleY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-button {
+    background-color: #e3e5e7;
+    position: relative;
+}
+
+.accordion-button::after {
+    background-color: #e3e5e7;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 50%;
+}
+
+.accordion-button:focus {
+    background-color: #e3e5e7;
+    box-shadow: none;
+    outline: none;
+}
+
+.accordion-item{
+    background-color: #e3e5e7;
 }

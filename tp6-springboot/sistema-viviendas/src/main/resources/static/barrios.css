@@ -35,16 +35,14 @@ main {
     color: #0d6efd;
 }
 
-.btn-agregar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 50px;
-    background-color: #4380bd;
-    color: white;
+.btn-agregar {
+    background-color: #a1b4ff;
+    border: none;
+    color: rgb(61, 61, 61);
+    text-decoration: none;
 }
 
-.btn-agregar:hover{
-    background-color: #519ae4;
+.btn-agregar:hover {
+    background-color: #7f98ff;
+    color: white;
 }

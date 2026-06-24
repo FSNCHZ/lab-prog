@@ -9,14 +9,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.simple-card {
+.card {
     min-height: 390px;
     border: 1px solid #e6e6e6;
     border-radius: 12px;
     background-color: white;
 }
 
-.simple-card:hover {
+.card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }

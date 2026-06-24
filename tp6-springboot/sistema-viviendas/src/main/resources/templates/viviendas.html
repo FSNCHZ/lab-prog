@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <div class="header text-center py-3 mb-4">
+        <div class="header text-center py-3 mb-2">
             <h1 class="h3 mb-2 text-dark">Listado de Viviendas</h1>
             <nav>
                 <div class="d-flex justify-content-center gap-4">
@@ -23,42 +23,73 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <div class="content-card">
-                <div class="row">
-                    <div class="col-lg-3 mb-3">
-                        <a th:href="@{/viviendas/nueva}" class="btn-agregar btn-primary mb-3">Agregar vivienda</a>
+        <div class="container-fluid justify-content-center">
+            <div class="p-4 d-flex justify-content-center">
+                <a th:href="@{/viviendas/nueva}" class="btn-agregar btn-primary mb-3 px-3 py-2 rounded-5">Agregar vivienda</a>
+            </div>
+            <div class="row w-100 justify-content-center gap-4">
+                <div th:each="vivienda, iterStat :${viviendas}" class="card p-0 col-4 col-m-8 col-sm-12" style="width: 18rem;">
+                    <img th:src="@{/vivienda.jpg}" class="d-block w-100" alt="vivienda">
+                    <div class="card-body">
+                        <h5 th:text="|${vivienda.calle} ${vivienda.nro}|" class="card-title">Calle y Número</h5>
+                        <p th:text="|Titular: ${vivienda.titular}|" class="card-text mb-2 p-1">Titular</p>
+                        <p th:text="|Barrio: ${vivienda.barrio.nombre}|" class="card-text mb-2 p-1">Barrio</p>
+                        <p th:text="|N° habitantes: ${vivienda.numHabitantes}|" class="card-text p-1">Número Habitantes</p>
                     </div>
-                </div>
-                <div class="row">
-                    <table class="table mt-4 table-bordered">
-                        <thead>
-                        <tr>
-                            <th>Calle</th>
-                            <th>Número</th>
-                            <th>Titular</th>
-                            <th>Número de Habitantes</th>
-                            <th>Barrio</th>
-                            <th>Acciones</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr th:each="vivienda : ${viviendas}">
-                                <td th:text="${vivienda.calle}">Calle</td>
-                                <td th:text="${vivienda.nro}">Número</td>
-                                <td th:text="${vivienda.titular}">Titular</td>
-                                <td th:text="${vivienda.numHabitantes}">Número de habitantes</td>
-                                <td th:text="${vivienda.barrio.nombre}">Barrio</td>
-                                <td>
-                                    <a th:href="@{/viviendas/editar/{id}(id=${vivienda.id})}" class="btn-modificar">Modificar</a>
-                                    <a th:href="@{/viviendas/{id}(id=${vivienda.id})}" class="btn-eliminar">🗑︎</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="accordion accordion-flush" th:id="'accordion-' + ${iterStat.index}" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <button class="accordion-button collapsed pb-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" th:data-bs-target="'#collapse-' + ${iterStat.index}" aria-expanded="false" aria-controls="flush-collapseOne"></button>
+                            <div th:id="'collapse-' + ${iterStat.index}" id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="">
+                                <div class="accordion-body">
+                                    <div class="d-flex p-4 justify-content-around">
+                                        <a th:href="@{/viviendas/editar/{id}(id=${vivienda.id})}" class="btn-modificar rounded-5">Modificar</a>
+                                        <a th:href="@{/viviendas/{id}(id=${vivienda.id})}" class="btn-eliminar rounded-5">Eliminar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <!--
+            <div class="container">
+                <div class="content-card">
+                    <div class="row">
+                        <div class="col-lg-3 mb-3">
+                            <a th:href="@{/viviendas/nueva}" class="btn-agregar btn-primary mb-3">Agregar vivienda</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <table class="table mt-4 table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Calle</th>
+                                <th>Número</th>
+                                <th>Titular</th>
+                                <th>Número de Habitantes</th>
+                                <th>Barrio</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="vivienda : ${viviendas}">
+                                    <td th:text="${vivienda.calle}">Calle</td>
+                                    <td th:text="${vivienda.nro}">Número</td>
+                                    <td th:text="${vivienda.titular}">Titular</td>
+                                    <td th:text="${vivienda.numHabitantes}">Número de habitantes</td>
+                                    <td th:text="${vivienda.barrio.nombre}">Barrio</td>
+                                    <td>
+                                        <a th:href="@{/viviendas/editar/{id}(id=${vivienda.id})}" class="btn-modificar">Modificar</a>
+                                        <a th:href="@{/viviendas/{id}(id=${vivienda.id})}" class="btn-eliminar">🗑︎</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        -->
     </main>
     <footer class="mt-5 py-3 bg-white border-top">
         <div class="container text-center text-muted small">
