@@ -37,46 +37,16 @@ window.onload = () => {
         let mensaje;
         let errores = [];
 
-        const calle = document.getElementById("calle").value.trim();
-        let regex = /^[A-Za-z1-9 ]{1,50}$/;
-        if(!calle){
-            mensaje = "Ingrese el nombre de la calle";
+        const nombre = document.getElementById("nombre").value.trim();
+        let regex = /^[A-Za-z1-9 ]{1,30}$/;
+        if(!nombre){
+            mensaje = "Ingrese el nombre del barrio";
             errores.push(mensaje);
-        } else if (!regex.test(calle)){
-            mensaje = "Ingrese una calle alfabética de 50 caracteres máx.";
-            errores.push(mensaje);
-        }
-
-        const numero = document.getElementById("nro").value;
-        let regexNum = /^\d{1,5}$/;
-        if(!numero || numero == 0){
-            mensaje = "Ingrese el número de la calle";
-            errores.push(mensaje);
-        } else if (!regexNum.test(numero)) {
-            mensaje = "Debe ingresar un número de calle de 5 digitos";
+        } else if (!regex.test(nombre)){
+            mensaje = "Ingrese una barrio con nombre alfabético de 30 caracteres máx.";
             errores.push(mensaje);
         }
 
-        const titular = document.getElementById("titular").value.trim();
-        regex = /^[A-Za-z ]{1,40}$/;
-        if(!titular){
-            mensaje = "Ingrese el nombre del titular";
-            errores.push(mensaje);
-        } else if (!regex.test(titular)) {
-            mensaje = "Ingrese un nombre alfabético de 40 caracteres máx."
-            errores.push(mensaje);
-        }
-
-        const habitantes = document.getElementById("numHabitantes").value;
-        regexNum = /^\d{1,2}$/;
-        if(!habitantes || habitantes == 0){
-            mensaje = "Ingrese la cantidad de habitantes de la vivienda";
-            errores.push(mensaje);
-        } else if (!regexNum.test(habitantes)) {
-            mensaje = "Ingrese una cantidad de habitantes de 2 digitos";
-            errores.push(mensaje);
-        }
-        
         return errores;
     }
 
