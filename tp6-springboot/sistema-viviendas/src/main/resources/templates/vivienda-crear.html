@@ -22,7 +22,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main id="main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 p-4 container justify-content-center card">
@@ -30,30 +30,30 @@
                         <button class="btn btn-volver"><a href="/viviendas">X</a></button>
                     </div>
                     <div class="card-body">
-                        <form th:action="@{/viviendas}" th:object="${vivienda}" method="POST">
+                        <form id="form" th:action="@{/viviendas}" th:object="${vivienda}" method="POST">
                             <div class="form-group">
-                                <label>Calle</label>
-                                    <input type="text" name="calle" th:field="*{calle}" class="form-control" placeholder="Ingrese la calle de la vivienda" required>
+                                <label for="calle">Calle</label>
+                                    <input type="text" name="calle" id="calle" th:field="*{calle}" class="form-control" placeholder="Ingrese la calle de la vivienda" required>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label>Número</label>
-                                <input type="number" name="nro" th:field="*{nro}" class="form-control" placeholder="Ingrese el número de la vivienda" required>
+                                <label for="nro">Número</label>
+                                <input type="number" name="nro" id="nro" th:field="*{nro}" class="form-control" placeholder="Ingrese el número de la vivienda" required>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label>Titular</label>
-                                    <input type="text" name="titular" th:field="*{titular}" class="form-control" placeholder="Ingrese el titular de la vivienda" required>
+                                <label for="titular">Titular</label>
+                                    <input type="text" name="titular" id="titular" th:field="*{titular}" class="form-control" placeholder="Ingrese el titular de la vivienda" required>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label>Número de habitantes</label>
-                                <input type="number" name="numHabitantes" th:field="*{numHabitantes}" class="form-control" placeholder="Ingrese el número de habitantes en la vivienda" required>
+                                <label for="numHabitantes">Número de habitantes</label>
+                                <input type="number" name="numHabitantes" id="numHabitantes" th:field="*{numHabitantes}" class="form-control" placeholder="Ingrese el número de habitantes en la vivienda" required>
                             </div>
                             <br>
                             <div class="form-group">
-                                <label>Barrio</label>
-                                <select class="form-select" th:field="*{barrio}">
+                                <label for="barrio">Barrio</label>
+                                <select id="barrio" class="form-select" th:field="*{barrio}">
                                     <option value="" selected>Seleccione un barrio</option>
                                     <option th:each="b:${barrios}" 
                                             th:value="${b.id}" 
@@ -62,7 +62,7 @@
                                 </select>
                             </div>
                             <div class="box-footer mt-4">
-                                <button class="btn btn-guardar">Guardar</button>
+                                <button type="submit" id="btn-guardar" class="btn btn-guardar">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -76,5 +76,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script th:src="@{/viviendas.js}"></script>
 </body>
 </html>

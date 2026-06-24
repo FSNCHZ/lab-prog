@@ -42,8 +42,8 @@ window.onload = () => {
             errores.push(mensaje);
         }
 
-        const numero = document.getElementById("numero").value;
-        if(!numero){
+        const numero = document.getElementById("nro").value;
+        if(!numero || numero == 0){
             mensaje = "Ingrese el número de la calle";
             errores.push(mensaje);
         } else if (!regexNum.test(numero)) {
@@ -61,9 +61,9 @@ window.onload = () => {
             errores.push(mensaje);
         }
 
-        const habitantes = document.getElementById("habitantes").value;
+        const habitantes = document.getElementById("numHabitantes").value;
         regexNum = /^\d{1,2}$/;
-        if(!habitantes){
+        if(!habitantes || habitantes == 0){
             mensaje = "Ingrese la cantidad de habitantes de la vivienda";
             errores.push(mensaje);
         } else if (!regexNum.test(habitantes)) {
