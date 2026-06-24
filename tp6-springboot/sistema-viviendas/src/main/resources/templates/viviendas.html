@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Viviendas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/vivienda.css">
+</head>
+<body>
+    <header>
+        <div class="header text-center py-3 mb-4">
+            <h1 class="h3 mb-2 text-dark">Listado de Viviendas</h1>
+            <nav>
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="/index">Menú Principal</a>
+                    <a href="/barrios">Barrios</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content-card">
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <a th:href="@{/viviendas/nueva}" class="btn-agregar btn-primary mb-3">Agregar vivienda</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <table class="table mt-4 table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Calle</th>
+                            <th>Número</th>
+                            <th>Titular</th>
+                            <th>Número de Habitantes</th>
+                            <th>Barrio</th>
+                            <th>Acciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="vivienda : ${viviendas}">
+                                <td th:text="${vivienda.calle}">Calle</td>
+                                <td th:text="${vivienda.nro}">Número</td>
+                                <td th:text="${vivienda.titular}">Titular</td>
+                                <td th:text="${vivienda.numHabitantes}">Número de habitantes</td>
+                                <td th:text="${vivienda.barrio.nombre}">Barrio</td>
+                                <td>
+                                    <a th:href="@{/viviendas/editar/{id}(id=${vivienda.id})}" class="btn-modificar">Modificar</a>
+                                    <a th:href="@{/viviendas/{id}(id=${vivienda.id})}" class="btn-eliminar">🗑︎</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-5 py-3 bg-white border-top">
+        <div class="container text-center text-muted small">
+            TP6 - Sánchez Francisco
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

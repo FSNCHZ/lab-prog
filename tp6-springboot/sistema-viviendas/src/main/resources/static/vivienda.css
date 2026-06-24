@@ -1,0 +1,84 @@
+*{
+    font-family: "Google Sans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f6f8;
+}
+
+main {
+    flex: 1;
+}
+
+.header {
+    background-color: white;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.header h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header a:hover {
+    color: #0d6efd;
+}
+
+.btn-agregar {
+    background-color: #5c7cfa;
+    border: none;
+    color: white;
+    height: 60px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-agregar:hover {
+    background-color: #4c6ef5;
+    color: white;
+}
+
+.btn-modificar {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-modificar:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+.btn-eliminar {
+    background-color: #c92a2a;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-eliminar:hover {
+    background-color: #a61e1e;
+    color: white;
+}
+
+thead th{
+    font-weight: 200;
+}
+
+tbody td:hover{
+    background-color: #b3ccf1;
+}
