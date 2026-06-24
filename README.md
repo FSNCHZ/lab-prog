@@ -4,7 +4,7 @@
 
 El video que pertenece a la demostración del proyecto es "Video_Trabajo_Final_SanchezFrancisco.mp4". Ya avisé por mail al profesor Reinaga, pero el proyecto tiene un CSS muy básico porque me cortaron la luz en mi casa, y no pude terminar de pulirlo bien, como así la funcionalidad es muy básica. En caso de que se pueda hacer una re entrega estaría muy agradecido.
 
-###Actualización 24/6/26
+### Actualización 24/6/26
 
 Realicé algunos cambios principalmente en el CSS del proyecto, cambié el overlay de viviendas por tablas, y utilicé unas cards para representar las viviendas.
 
