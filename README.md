@@ -8,6 +8,10 @@ El video que pertenece a la demostración del proyecto es "Video_Trabajo_Final_S
 
 Realicé algunos cambios principalmente en el CSS del proyecto, cambié el overlay de viviendas por tablas, y utilicé unas cards para representar las viviendas.
 
+### Actualización II 24/6/26
+
+Actualicé el video del proyecto, ahora es "Video_Trabajo_Final_SanchezFrancisco_Act.mp4"
+
 ## Trabajo Práctico 3 - 13/5/26
 
 El archivo Streaming.json corresponde al json solicitado en el punto 2
